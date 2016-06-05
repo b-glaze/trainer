@@ -1,0 +1,35 @@
+<div class="forgotpage">
+	<div class="bar"></div>
+  	<div class="logintitle">
+    	<p class="fit">FIT</p>    
+    	<p class="trainer">TRAINER</p>
+ 	</div>
+
+	<div class="forgotbox">
+		<h3 class="forgotboxhead">Forgot your Password?</h3>
+		<p class="forgotboxhead">Please provide the email address you used when you signed up.</p>
+		<p class="forgotboxhead">We will send you and email that will allow you to reset your password.</p>
+		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+		  <%= devise_error_messages! %>
+
+		  <div class="forgotfield">    
+		    <%= f.email_field :email, autofocus: true, class: 'textbox', placeholder: 'Email' %>
+		  </div>
+
+		  <div class="reset">
+		    <%= f.submit "Reset Password", class: 'signinbtn' %>
+		  </div>
+		<% end %>
+
+		<%#= render "devise/shared/links" %>
+	</div>
+
+	<div class="footer">
+    <div class="footercontent">
+      <h3>FIT</h3>
+      <p>&copy FIT app. All rights reserved</p>
+    </div>
+
+  	</div>
+
+</div>

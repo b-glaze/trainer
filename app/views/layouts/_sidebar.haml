@@ -1,0 +1,23 @@
+#left
+  = link_to root_url do
+    #box
+      .top FIT
+      .bottom trainer
+  = link_to profile_path do
+    #profile
+      = image_tag "jfix.jpeg", class: "selfie"
+    #name Jamie Foxx
+  %ul#navy
+    = link_to new_event_path do
+      %li  Create Event
+    = link_to events_path do
+      %li  My Events
+    = link_to profile_path do
+      %li  Profile
+    = link_to payment_path do
+      %li  Payment Info
+    = link_to stats_path do
+      %li  Stats
+  #foot
+    .topper FIT
+    .info @FIT app. All rights reversed

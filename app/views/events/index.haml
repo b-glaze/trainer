@@ -1,0 +1,11 @@
+= render "layouts/sidebar"
+#right
+  = render "layouts/hamburger"
+  = render "layouts/top", :top => "Event Index Page"
+  - @events.each do |x|
+    = link_to event_path(x) do
+      .imageSection.clip
+        = image_tag x.cover.url
+        .gradient
+          %span
+            = x.title

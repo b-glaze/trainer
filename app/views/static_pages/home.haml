@@ -1,0 +1,25 @@
+= render "layouts/sidebar"
+#right
+  = render "layouts/hamburger"
+  = render "layouts/top", :top => "Home Page"
+  %h1.text-danger Things to be done
+  %hr
+  %ol.bigger
+    %li Style profile edit page 
+    %br
+    %li Make Events belong to a certain trainer id
+    %li Make "My Events" only show events that belong to current user logged in
+    %li Allow events to be deleted but only by it's owner
+    %li Add validations to the Event model, validate the presence of all fields. Also make sure price is from $1 - $800
+    %li Find some way to show error messages on the create event page
+    %li For some reason event date time is not being saved into the database, find out why
+    %br
+    %li Don't allow users who are not logged in to view the site, redirect them to login page. this must be unique 
+    %li Add all the "missing" fields from the registration page to the trainer model
+    %li 
+      The profile image on the left-hand side of the app will be gotten from gravatar  
+      = link_to "read about it here. ", "https://en.gravatar.com/", target: "blank"
+      Using their email
+    %li 
+      Watch the video and add payments to the site. This requires two pages, one taking cards and one creating the payment
+    %li Anyone, even a logged out user, can pay for an event but you cannot pay for your own event.

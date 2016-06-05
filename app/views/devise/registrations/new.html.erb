@@ -1,0 +1,72 @@
+<div class="registerpage">
+  <div class="bar"></div>
+
+  <div class="registerbox">
+
+    <div class="regboxhead">
+      <h3>Register</h3>
+      <%= devise_error_messages! %>
+    </div>
+
+    <div class="registerboxleft">
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        
+        <div class="regfieldtop">
+          <%= text_field_tag :name, "",  autofocus: true, class: 'regtextboxtop', placeholder: 'John Doe' %>
+        </div>
+
+        <div class="regfield">
+          <%= f.email_field :email, autocomplete: "off", class: 'regtextbox', placeholder: 'Email' %>
+        </div>
+
+        <div class="regfield">
+          <%= text_field_tag :username, "",  autocomplete: "off", class: 'regtextbox', placeholder: 'Username' %>
+        </div>
+        <div class="regfield">
+          <%= text_field_tag :phone, "", autocomplete: "off", class: 'regtextbox', placeholder: 'Phone Number' %>
+        </div>
+        <div class="regfield">
+          <%= f.password_field :password, autocomplete: "off", class: 'regtextbox', placeholder: 'Password' %>
+        </div>
+        <div class="regfield">
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'regtextbox', placeholder: 'Confirm Password' %>
+        </div>
+      <% end %>
+    </div>
+      
+    <div class="registerboxright">
+      <div class="boxrightcontent">
+        <div class="regboxrighthead">
+          <h1>FIT</h1>
+          <p>TRAINER</p>
+        </div>
+        <div class="regboxrightcontent">
+          <p>Join the leading trainers in the industry.  Build your business, build your clients and receive analytics on your project.</p>
+          <br>
+          <p>Sign up today for free!</p>
+        </div>
+      </div>  
+    <%#= render "devise/shared/links" %>
+      <div class="regbtnbox">
+        <div class="signupbtn">
+          Sign Up
+        </div>
+      </div> 
+      <div class="regboxrightfooter">
+        <p>
+          Already have an account?  
+          <%= link_to "Sign in", new_trainer_session_path %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footercontent">
+      <h3>FIT</h3>
+      <p>&copy FIT app. All rights reserved</p>
+    </div>
+  </div>
+</div>
+

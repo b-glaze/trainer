@@ -1,0 +1,59 @@
+= render "layouts/sidebar"
+#right
+  = render "layouts/hamburger"
+  = render "layouts/top", :top => "Create an Event"
+  .blueText
+    Upload photos
+  = form_for @event, html: {class: "zomg", multipart: true} do |f|
+    #imageRow
+      = f.label :cover, class: "imageBox"
+      = f.file_field :cover
+
+      .hint
+        %span Hint:
+        Make this photo enticing, it will be the first thing your clients see while searching for classes.
+      #rightWrap
+        = f.label :confirm, class: "imageBox"
+        = f.file_field :confirm
+        .hint
+          %span Hint:
+          Make this photo enticing, it will be the first thing your clients see while searching for classes.
+    #sect2
+
+    .westSide
+      .blueText
+        Event details
+      = f.text_field :title, placeholder: "Title of Event"
+      = text_field_tag :location, nil, placeholder: "Location"
+      %div
+        = f.text_area :description, placeholder: "Describe your class and get your client base excited to sign-up"
+        %span.explainer Description
+      %div
+        = f.text_field :price, placeholder: "$ 0.00", class: "price"
+        %span.explainer Price &nbsp; &nbsp;  $
+      %div
+        #datetimepicker1.input-group.date.righter
+          = f.text_field :time, placeholder: "When is this class", class: "picker form-control"
+          %span.input-group-addon
+            %span.glyphicon.glyphicon-calendar
+        %span.explainer Date / Time
+    .eastSide
+      .blueText
+        Event details (Optional)
+
+      %div
+        = text_area_tag :tips, nil, placeholder: "Instructions and equipment necessary to attend (seperated by commas)", class: "secondtext"
+        %span.explainer Tips
+      %div
+        = text_area_tag :tags, nil, placeholder: "Describe your class and get your client base excited to sign-up", class: "secondtext"
+        %span.explainer Tags
+      .terms
+        By clicking publish you agree to our 
+        %a{href: "#"}
+          terms of service 
+      = f.submit "Submit", class: "butt"
+
+:javascript
+  $(function () {
+      $('#datetimepicker1').datetimepicker();
+  });

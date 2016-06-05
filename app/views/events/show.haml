@@ -1,0 +1,14 @@
+= render "layouts/sidebar"
+#right
+  = render "layouts/hamburger"
+  .imageSection
+    = image_tag @event.cover.url
+    .gradient
+      %span
+        = @event.title
+  %h3
+    description:
+    = @event.description
+    %br
+    price:
+    = number_to_currency(@event.price)

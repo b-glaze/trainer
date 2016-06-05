@@ -1,0 +1,21 @@
+.upper
+  %a{:href => "#", :id => "burgera"}
+    = image_tag "ham.png", class: "burger"
+  .east
+    = link_to "FAQ", faq_path
+    = link_to "LOG OUT", new_trainer_registration_path
+    
+:javascript
+  var open = true;
+  var initialWidth = $('#right').width() + 22;;
+  $('#burgera').click(function(){
+    if(open){
+    	$('#left').stop().animate({left: '-180px'}, 700);
+    	$("#right").stop().animate({width: "100%", marginLeft: "0"}, 700);
+    	open = false;
+    }else{
+  	  	$('#left').stop().animate({left: '0px'}, 700);
+  	  	$("#right").stop().animate({width: initialWidth, marginLeft: "180px"}, 700);
+  	  	open = true;
+    }
+  })

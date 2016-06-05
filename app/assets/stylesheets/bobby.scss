@@ -1,0 +1,244 @@
+.loginpage, .forgotpage, .registerpage {
+  background-size: cover !important;
+  height: 100vh;
+  width: 100%; }
+
+.loginpage {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/assets/login.jpg") no-repeat center center fixed; }
+
+.forgotpage {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/assets/forgot.jpg") no-repeat center center fixed; }
+
+.registerpage {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/assets/register.jpg") no-repeat center center fixed; }
+
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: black; }
+
+.logintitle {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75px;
+  padding-top: 3%; }
+
+.fit {
+  font-size: 40px;
+  color: black; }
+
+.trainer {
+  color: gray; }
+
+.loginbox, .forgotbox, .registerbox {
+  border: solid 1px #646464;
+  border-radius: 8px;
+  background-color: white;
+  margin-left: auto;
+  padding-bottom:17px;
+  margin-right: auto; }
+
+.loginbox {
+  width: 500px;
+  text-align: center;
+  margin-top: 9%; }
+
+.forgotbox {
+  width: 500px;
+  text-align: left;
+  margin-top: 5%; }
+
+.registerbox {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap; }
+
+.registerboxleft {
+  width: calc(50% - 1px);
+  display: inline-block;
+  float: left; }
+
+.regfield, .regfieldtop {
+  padding-left: 35px;
+  border-right: 1px solid #646464; }
+
+.regfield {
+  padding-top: 20px; }
+
+.regfieldtop {
+  margin-top: 0; }
+
+.regtextboxtop, .regtextbox {
+  height: 30px;
+  width: 80%;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px; }
+
+.registerboxright {
+  width: 50%;
+  float: right;
+  display: inline-block; }
+
+.regboxrighthead {
+  padding-bottom: 40px; }
+  .regboxrighthead h1 {
+    font-size: 80px;
+    color: #444;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .regboxrighthead p {
+    font-size: 30px;
+    color: #777;
+    margin-bottom: 0px; }
+
+.boxrightcontent {
+  text-align: center; }
+
+.regboxrightcontent {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px; }
+
+.regboxrightfooter {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 30px; }
+
+.loginboxhead {
+  padding: 5% 5% 5% 5px;
+  width: 100%;
+  padding-left: 70px;
+  padding-bottom: 5px;
+  float: left;
+  color: #646464;
+  font-weight: normal; }
+
+.forgotboxhead {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  color: #646464;
+  font-weight: normal; }
+
+.regboxhead {
+  width: 100%;
+  height: 80px; }
+  .regboxhead h3 {
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    float: left;
+    color: #646464;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+
+.loginfield, .loginfieldtop {
+  padding-left: 5%;
+  padding-right: 5%; }
+
+.loginfield {
+  padding-top: 20px; }
+
+.loginfieldtop {
+  margin-top: 0; }
+
+.forgotfield {
+  padding-top: 20px; 
+  input{
+  	display: block;
+  	margin:0 auto;}
+}
+
+.textbox, .textboxtop {
+  height: 30px;
+  width: 80%;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px; }
+
+.signin {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 238px; }
+
+.regbtnbox {
+  margin-left: auto;
+  margin-right: auto;
+  width: 259px; }
+
+.signinbtn, .signupbtn {
+  color: white;
+  background-color: black;
+  padding: 15px 100px;
+  border-radius: 20px;
+  border: 1px solid black; }
+
+.reset {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  input{
+  	display: block;
+  	margin:0 auto;}
+  }
+
+.signuplink {
+  text-decoration: none;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 2; }
+
+.forgotlink {
+  text-decoration: none;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 2; }
+
+.downloadapp {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 370px;
+  padding-top: 2%; }
+  .downloadapp p {
+    padding-bottom: 20px; }
+  .downloadapp .apple {
+    float: left; }
+  .downloadapp .google {
+    float: right; }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+  .footer p {
+    font-size: .7em; }
+  .footer h3 {
+    color: gray;}
+
+.footercontent {
+  width: 150px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: .5%; }
+  .footercontent p {
+    font-size: .7em; }
+  .footercontent h3 {
+    color: gray;}
+
+/*# sourceMappingURL=devise.css.map */
