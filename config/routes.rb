@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "static_pages#home"
-
-  devise_for :trainers
-  devise_for :clients
 
   resources :events
 
@@ -10,5 +8,4 @@ Rails.application.routes.draw do
   get "/profile" 	=> "users#profile"
   get "/payment" 	=> "users#payment"
   get "/stats" 		=> "users#stats"
-  
 end
