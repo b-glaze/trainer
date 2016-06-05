@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   get "/faq" 		=> "static_pages#faq"
   get "/profile" 	=> "users#profile"
   get "/payment" 	=> "users#payment"
-  get "/stats" 		=> "users#stats"
 end
