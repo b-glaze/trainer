@@ -1,4 +1,35 @@
 = render "layouts/sidebar"
 #right
   = render "layouts/hamburger"
-  = render "layouts/top", :top => "Profile"
+  = render "layouts/top", :top => "Edit Profile"
+  .blueText
+    = link_to "Upload photos to Gravatar", "https://en.gravatar.com/", target: "blank"
+  %form.zomg
+    #imageRow
+      = image_tag "jfix.jpeg", class: "bigSelfie"
+      .hint2
+        %span Hint:
+        Make sure your profile picture is up-o-date (within the past few years) and reflect how you look on a daily basis - your hair, glasses, makeup, etc
+    #sect2
+    .westSide
+      .blueText
+        Bio
+      = text_field_tag :name, "" , placeholder: "Name", id: nil
+      = text_field_tag :email, nil, placeholder: "Email"
+      %div
+        = text_area_tag :description,"", placeholder: "Here is a chance to tell the clients about your story and the services you provide!"
+        %span.explainer About
+      %div
+        = text_area_tag :price,"", placeholder: "$ 0.00", class: "price"
+        %span.explainer Skills
+    .eastSide
+      .blueText
+        Update Password & Certificate
+      = text_field_tag :password, nil, placeholder: "Current Password", class: "shorter"
+      = text_field_tag :password_confirmation, nil, placeholder: "New Password", class: "shorter"
+      = text_field_tag :certification, nil, placeholder: "Certification", class: "shorter"
+      .terms.topBump
+        By clicking publish you agree to our 
+        = link_to faq_path do
+          terms of service 
+      = submit_tag "Submit", class: "butt"

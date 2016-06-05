@@ -5,21 +5,30 @@
   %h1.text-danger Things to be done
   %hr
   %ol.bigger
-    %li Style profile edit page 
+    %li Forget the Statistics page, we're not making that
+    %li Style the payment page to take credit card
+    %li 
+      Watch the video and add payments to the site. This requires two pages, one taking cards and one creating the payment
     %br
-    %li Make Events belong to a certain trainer id
+    %li Make Events belong to a certain user id, ( give events a :user_id column that takes an integer )
     %li Make "My Events" only show events that belong to current user logged in
     %li Allow events to be deleted but only by it's owner
     %li Add validations to the Event model, validate the presence of all fields. Also make sure price is from $1 - $800
     %li Find some way to show error messages on the create event page
     %li For some reason event date time is not being saved into the database, find out why
+    %li Create an edit event page, it looks EXACTLY like the event new page. Make this tie into the database.
     %br
-    %li Don't allow users who are not logged in to view the site, redirect them to login page. this must be unique 
-    %li Add all the "missing" fields from the registration page to the trainer model
+    %li Don't allow users who are not logged in to view the site, redirect them to login page
+    %li After step above remove the link in the top right "login link?"
     %li 
       The profile image on the left-hand side of the app will be gotten from gravatar  
       = link_to "read about it here. ", "https://en.gravatar.com/", target: "blank"
       Using their email
-    %li 
-      Watch the video and add payments to the site. This requires two pages, one taking cards and one creating the payment
+
     %li Anyone, even a logged out user, can pay for an event but you cannot pay for your own event.
+    %br
+    %li Error messages on register page break out of the div. Make it look nice.
+    %li Error messages on forgot page break out of the div. Make it look nice.
+    %li Error messages on login don't even show up. Fix it.
+    %hr
+    %p.text-warning I realized that having two seperate users is an unecessary abstraction so we'll only have one user that can perform both actions, those actions being creating an event and also attending an event.
