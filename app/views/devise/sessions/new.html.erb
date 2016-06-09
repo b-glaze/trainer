@@ -6,6 +6,9 @@
   </div>
   
   <div class="loginbox">
+    <%- flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <%- end -%>  
     <h4 class="loginboxhead text-left">Sign in</h4>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           

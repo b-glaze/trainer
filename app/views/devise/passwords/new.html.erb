@@ -10,8 +10,9 @@
 		<p class="forgotboxhead">Please provide the email address you used when you signed up.</p>
 		<p class="forgotboxhead">We will send you and email that will allow you to reset your password.</p>
 		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+		<div class="forgot-error">
 		  <%= devise_error_messages! %>
-
+		</div>
 		  <div class="forgotfield">    
 		    <%= f.email_field :email, autofocus: true, class: 'textbox', placeholder: 'Email' %>
 		  </div>

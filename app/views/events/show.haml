@@ -12,3 +12,7 @@
     %br
     price:
     = number_to_currency(@event.price)
+    %br
+    = link_to "Edit event", edit_event_path(@event.id)
+    %br
+    = link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure you want to delete this event?"}

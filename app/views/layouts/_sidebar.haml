@@ -5,8 +5,9 @@
       .bottom trainer
   = link_to profile_path do
     #profile
-      = image_tag "jfix.jpeg", class: "selfie"
-    #name Jamie Foxx
+      %image{src: findPhoto, class: "selfie"}
+    #name
+      = current_user.username
   %ul#navy
     = link_to new_event_path do
       %li  Create Event

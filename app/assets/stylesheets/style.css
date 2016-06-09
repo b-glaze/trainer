@@ -49,6 +49,7 @@ a{
 	margin-top:7px;
 	font-size: 20px;
 	letter-spacing: 2px;
+	text-transform: capitalize;
 }
 img.selfie{
 	width:90px;
@@ -334,4 +335,30 @@ ol.bigger, .bigger{
 }
 input.shorter{
 	width:90%;
+}
+
+.forgot-error, .reg-error {
+	width: 400px;
+	height: 50px;
+	font-size: 15px;
+	color: red;
+	margin-left: 51px;
+	display: inline-block;
+	margin-top: -3%;
+}
+
+.forgot-error h2, .reg-error h2 {
+	font-size: 18px;
+}
+
+.forgot-error ul li, .reg-error ul li {
+	margin-left: 5%;
+}
+
+.registerboxleft form {
+	margin-top: 15px;
+}
+
+.reg-error {
+	margin-left: 38px;	
 }

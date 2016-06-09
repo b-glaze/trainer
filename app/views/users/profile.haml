@@ -6,7 +6,7 @@
     = link_to "Upload photos to Gravatar", "https://en.gravatar.com/", target: "blank"
   %form.zomg
     #imageRow
-      = image_tag "jfix.jpeg", class: "bigSelfie"
+      %image{src: findLargePhoto, class: "bigSelfie"}
       .hint2
         %span Hint:
         Make sure your profile picture is up-to-date (within the past few years) and reflect how you look on a daily basis - your hair, glasses, makeup, etc
