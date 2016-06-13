@@ -41,10 +41,10 @@ class EventsController < ApplicationController
 	def update
 		@event = Event.find(params[:id])
 		if @event.update_attributes(permit_event)
-			flash[:success] = "Event updated!"
+			flash[:green] = "Event updated!"
 			redirect_to event_path(@event)
 		else
-			flash[:whoops] = @event.errors.full_messages.first
+			flash[:red] = @event.errors.full_messages.first
 			redirect_to event_path
 	    end
 	end
