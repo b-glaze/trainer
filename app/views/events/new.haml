@@ -30,7 +30,6 @@
         = f.text_area :description, placeholder: "Describe your class and get your client base excited to sign-up"
         %span.explainer Description
       %div
-        = f.text_field :price, placeholder: "$ 0.00", class: "price"
         = f.text_field :price, data: {autonumeric: true}, placeholder: "$ 0.00", class: "price"
         %span.explainer Price &nbsp; &nbsp;  $
         = f.hidden_field :time, class: "hiddenTime", value: "00"
