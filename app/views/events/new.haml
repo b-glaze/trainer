@@ -8,7 +8,6 @@
     #imageRow
       = f.label :cover, class: "imageBox"
       = f.file_field :cover
-
       .hint
         %span Hint:
         Make this photo enticing, it will be the first thing your clients see while searching for classes.
@@ -19,13 +18,12 @@
           %span Hint:
           Make this photo enticing, it will be the first thing your clients see while searching for classes.
     #sect2
-
     .westSide
+      - flash.each do |key,value|
+        %span{class: key}
+          = value
       .blueText
         Event details
-        - flash.each do |key, value|
-          %h5{:class => key}
-            = value
       = f.text_field :title, placeholder: "Title of Event"
       = text_field_tag :location, nil, placeholder: "Location"
       %div
@@ -34,9 +32,10 @@
       %div
         = f.text_field :price, placeholder: "$ 0.00", class: "price"
         %span.explainer Price &nbsp; &nbsp;  $
+        = f.hidden_field :time, class: "hiddenTime", value: "00"
       %div
         #datetimepicker1.input-group.date.righter
-          = f.text_field :time, placeholder: "When is this class", class: "picker form-control"
+          = text_field_tag :temptime, nil, placeholder: "When is this class", class: "picker form-control"
           %span.input-group-addon
             %span.glyphicon.glyphicon-calendar
         %span.explainer Date / Time
@@ -54,9 +53,17 @@
         By clicking publish you agree to our 
         = link_to faq_path do
           terms of service 
-      = f.submit "Submit", class: "butt"
+      .butt Submit
 
 :javascript
   $(function () {
-      $('#datetimepicker1').datetimepicker();
+      $('#datetimepicker1').datetimepicker({
+        format: 'MM/DD/YYYY hh:mm A'
+      });
+      $('.butt').click(function(){
+        var tempTime = $('.picker').val();
+        var result = new Date(tempTime).toISOString();
+        $('.hiddenTime').val(result);
+        $('.zomg').submit();
+      })
   });
