@@ -14,7 +14,8 @@
     = number_to_currency(@event.price)
     %br
     time:
-    = @event.time
+    - if @event.time != nil
+      = @event.time.strftime("%b %d, %Y, %l:%M%P")
     %br
     = link_to "Edit event", edit_event_path(@event.id)
     %br

@@ -11,6 +11,7 @@ gem 'haml'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails', '4.2.6'
+gem 'autonumeric-rails'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
