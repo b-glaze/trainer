@@ -49,6 +49,28 @@ class EventsController < ApplicationController
 	    end
 	end
 
+	def payment
+		@event = Event.find(params[:id])
+	end
+
+	def sendpayment
+  		@event = Event.find(params[:id])
+		token = params[:stripeToken]
+		begin
+		  charge = Stripe::Charge.create(
+		    :amount => (@event.price * 100).to_i,
+		    :currency => "usd",
+		    :source => token,
+		    :description => @event.title
+		  )
+		rescue Stripe::CardError => e
+		    flash[:red] = "error"
+			redirect_to event_path(@event)
+		end  
+		flash[:green] = "Purchase complete"
+		redirect_to event_path
+    end
+
 	private
 
 		def permit_event

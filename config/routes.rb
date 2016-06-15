@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   get "/faq" 		=> "static_pages#faq"
   get "/profile" 	=> "users#profile"
-  get "/payment" 	=> "users#payment"
+  get "/payment/:id" 	=> "events#payment",  as: "payment"
+  post "/payment/:id"	=> "events#sendpayment"
+  
 end
