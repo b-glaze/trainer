@@ -16,7 +16,22 @@ class EventsController < ApplicationController
 	end
 
 	def index
-		@events = Event.where(user_id: current_user.id)
+		@events = Event.all
+		respond_to do |format|
+		  format.html{
+			# @events = Event.where(user_id: current_user.id)
+		  }
+		  format.json{
+			# @events = Event.where(user_id: current_user.id)
+			# binding.pry
+			# return @events.to_json
+			render :json => @events
+		  }
+		  # format.js{
+		  # 	#
+		  # 	# binding.pry
+		  # }
+		end
 	end
 
 	def show

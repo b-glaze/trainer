@@ -39,7 +39,7 @@
   border-radius: 8px;
   background-color: white;
   margin-left: auto;
-  padding-bottom:17px;
+  padding-bottom: 17px;
   margin-right: auto; }
 
 .loginbox {
@@ -88,16 +88,18 @@
 
 .regboxrighthead {
   padding-bottom: 40px; }
-  .regboxrighthead h1 {
-    font-size: 80px;
-    color: #444;
-    font-weight: normal;
-    margin-top: 0px;
-    margin-bottom: 0px; }
-  .regboxrighthead p {
-    font-size: 30px;
-    color: #777;
-    margin-bottom: 0px; }
+
+.regboxrighthead h1 {
+  font-size: 80px;
+  color: #444;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+.regboxrighthead p {
+  font-size: 30px;
+  color: #777;
+  margin-bottom: 0px; }
 
 .boxrightcontent {
   text-align: center; }
@@ -132,14 +134,15 @@
 .regboxhead {
   width: 100%;
   height: 80px; }
-  .regboxhead h3 {
-    padding-left: 35px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    float: left;
-    color: #646464;
-    margin-top: 0px;
-    margin-bottom: 0px; }
+
+.regboxhead h3 {
+  padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  float: left;
+  color: #646464;
+  margin-top: 0px;
+  margin-bottom: 0px; }
 
 .loginfield, .loginfieldtop {
   padding-left: 5%;
@@ -152,11 +155,10 @@
   margin-top: 0; }
 
 .forgotfield {
-  padding-top: 20px; 
-  input{
-  	display: block;
-  	margin:0 auto;}
-}
+  padding-top: 20px; }
+  .forgotfield input {
+    display: block;
+    margin: 0 auto; }
 
 .textbox, .textboxtop {
   height: 30px;
@@ -189,11 +191,10 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
-  padding-bottom: 30px;
-  input{
-  	display: block;
-  	margin:0 auto;}
-  }
+  padding-bottom: 30px; }
+  .reset input {
+    display: block;
+    margin: 0 auto; }
 
 .signuplink {
   text-decoration: none;
@@ -213,22 +214,27 @@
   margin-right: auto;
   width: 370px;
   padding-top: 2%; }
-  .downloadapp p {
-    padding-bottom: 20px; }
-  .downloadapp .apple {
-    float: left; }
-  .downloadapp .google {
-    float: right; }
+
+.downloadapp p {
+  padding-bottom: 20px; }
+
+.downloadapp .apple {
+  float: left; }
+
+.downloadapp .google {
+  float: right; }
 
 .footer {
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0; }
-  .footer p {
-    font-size: .7em; }
-  .footer h3 {
-    color: gray;}
+
+.footer p {
+  font-size: .7em; }
+
+.footer h3 {
+  color: gray; }
 
 .footercontent {
   width: 150px;
@@ -236,9 +242,13 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: .5%; }
-  .footercontent p {
-    font-size: .7em; }
-  .footercontent h3 {
-    color: gray;}
+
+.footercontent p {
+  font-size: .7em; }
+
+.footercontent h3 {
+  color: gray; }
 
 /*# sourceMappingURL=devise.css.map */
+
+/*# sourceMappingURL=bobby.css.map */
